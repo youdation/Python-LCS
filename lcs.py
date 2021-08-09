@@ -23,7 +23,7 @@ def lcs_mat(list1, list2):
 # backtracks all the LCSs through a provided matrix
 def all_lcs(lcs_dict, mat, list1, list2, index1, index2):
 	# if we've calculated it already, just return that
-	if (lcs_dict.has_key((index1, index2))): return lcs_dict[(index1, index2)]
+	if (lcs_dict.__contains__((index1, index2))): return lcs_dict[(index1, index2)]
 	# otherwise, calculate it recursively
 	if (index1 == 0) or (index2 == 0): # base case
 		return [[]]
